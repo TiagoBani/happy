@@ -67,6 +67,7 @@ export default {
 
     const orphanagesRepository = getRepository(Orphanage)
 
+    data.open_on_weekends = Boolean(data.open_on_weekends)
     const orphanage = orphanagesRepository.create(data)
 
     await orphanagesRepository.save(orphanage)
